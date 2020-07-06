@@ -7,6 +7,8 @@
  */
 import 'package:flutter/material.dart';
 
+import 'pages/home/home.dart';
+import 'pages/login.dart';
 import 'pages/register.dart';
 
 void main() => runApp(MyApp());
@@ -18,12 +20,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue, // Material 主题色
-        // primaryColor:Colors.white  // App 顶部导航栏状态栏颜色
+        // primarySwatch: Colors.white, // Material 主题色
+        primaryColor: Colors.white, // App 顶部导航栏状态栏颜色
       ),
-      // home: HomePage(),
+      home: HomePage(),
       // home: LoginPage(),
-      home: RegisterPage(),
+      // home: RegisterPage(),
     );
   }
 }

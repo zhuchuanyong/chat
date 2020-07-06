@@ -7,7 +7,8 @@
  */
 import 'package:flutter/material.dart';
 import 'package:my_chat/components/badge/badge.dart';
-import 'package:my_chat/utils/style.dart';
+
+import 'components/chatList.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -15,67 +16,48 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<Widget> ListChat= [];
+  List<Widget> ListChat = [];
 
   void getListData() {
-
     ListChat.add(
-        ListTile(
-          leading: Stack(children: [
-            Container(
-              width: 48,
-              height: 48,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                image: DecorationImage(
-                  image: AssetImage('assets/images/avatar.png'),
-                ),
+      ListTile(
+        leading: Stack(children: [
+          Container(
+            width: 48,
+            height: 48,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              image: DecorationImage(
+                image: AssetImage('assets/images/avatar.png'),
               ),
             ),
-            Positioned(
-              child: BadgeWidge(msgnum: '2'),
-              right: 0,
-              top: 0,
-            )
-          ]),
-          title: Text('好友申请'),
-          subtitle: Text('茫茫人海,相遇便是缘分'),
-          trailing: Text(''),
-        ),
-      );
+          ),
+          Positioned(
+            child: BadgeWidge(msgnum: '2'),
+            right: 0,
+            top: 0,
+          )
+        ]),
+        title: Text('好友申请1'),
+        subtitle: Text('茫茫人海,相遇便是缘分'),
+        trailing: Text(''),
+      ),
+    );
     for (var i = 0; i < 20; i++) {
-      ListChat.add(
-        ListTile(
-          leading: Stack(children: [
-            Container(
-              width: 48,
-              height: 48,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                image: DecorationImage(
-                  image: AssetImage('assets/images/avatar.png'),
-                ),
-              ),
-            ),
-            Positioned(
-              child: BadgeWidge(msgnum: '20'),
-              right: 0,
-              top: 0,
-            )
-          ]),
-          title: Text('马化腾'),
-          subtitle: Text('有没有兴趣加入腾讯'),
-          trailing: Text('7:45'),
-        ),
-      );
+      ListChat.add(ChatList(
+        title: '333',
+        subtitle: '555',
+      ));
     }
   }
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     this.getListData();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,7 +91,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Container(
         child: ListView(
-          children:ListChat.toList(),
+          children: ListChat.toList(),
         ),
       ),
     );

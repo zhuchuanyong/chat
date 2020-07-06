@@ -43,6 +43,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false, // 防止部件溢出
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
