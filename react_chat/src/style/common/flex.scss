@@ -1,0 +1,48 @@
+@import '../mixins/base';
+.flex {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.flex_direction {
+    @include flex_direction;
+}
+.flex_direction_col {
+    @include flex_direction(column);
+}
+.flex_direction_col_r {
+    @include flex_direction(column-reverse);
+}
+.flex_direction_row_r {
+    @include flex_direction(row-reverse);
+}
+
+//换行
+.flex_wrap{
+    flex-wrap: wrap;
+}
+.flex_nowrap{
+    flex-wrap: nowrap;
+}
+.flex_wrap-reverse{
+    flex-wrap: wrap-reverse;
+}
+
+// 单行居中
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// 多行居中
+.flex_center_wrap {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@for $i from 1 through 20 {  
+    .flex_#{$i} {    
+        flex:#{$i} ;
+    }
+}

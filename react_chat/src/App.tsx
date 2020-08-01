@@ -1,11 +1,14 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import './style/index.scss';
+import Bdemo from './b';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="testdemo">wretched</div>
+        <div className="testdemo flex_direction_col">wretched</div>
+        <Bdemo></Bdemo>
       </header>
     </div>
   );
