@@ -1,20 +1,15 @@
 import React from 'react';
 import './index.scss';
-import avatar from '@image/avatar.png';
-interface iProps {
-    num:number,
-    imgUrl:string,
-    friendName:string,
-    time:string,
-    info:string
-}
-function ChatList(props:any) {
+import avatar from '@src/image/avatar.png';
+import {chatListProps } from '@src/types';
+// chatListProps
+function ChatList(props:chatListProps) {
     console.log(props);
     return (
         <div className="chatList flex">
            <div className="left">
                <div className="tip flex-center">
-                   1
+                   {props.num}
                </div>
                <img src={avatar} alt="" />
            </div>

@@ -8,7 +8,7 @@ function Home() {
         <div className="home h-min content ">
             <HeaderCom></HeaderCom>
             <div className="spacing-lf">
-                <ChatList a="ddd"></ChatList>
+                <ChatList  num={2}></ChatList>
             </div>
         </div>
     );
