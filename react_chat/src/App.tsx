@@ -1,16 +1,12 @@
 import React from 'react';
-import './App.scss';
 import './style/index.scss';
-import Bdemo from './b';
-
+import 'normalize.css'
+import RouterConfig from './router';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="testdemo flex_direction_col">wretched</div>
-        <Bdemo></Bdemo>
-      </header>
-    </div>
+    <>
+     <RouterConfig/>
+    </>
   );
 }
 
