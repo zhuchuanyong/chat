@@ -1,5 +1,5 @@
-const { override, addPostcssPlugins } = require("customize-cra");
-
+const { override, addPostcssPlugins,addWebpackAlias, adjustStyleLoaders } = require("customize-cra");
+const path = require("path");
 module.exports = override(
     addPostcssPlugins(
         [
@@ -19,6 +19,25 @@ module.exports = override(
                 }
             )
         ]
-        
-    )
+    ),
+    addWebpackAlias({
+        "@src": path.resolve(__dirname, "src"),
+        "@image": path.resolve(__dirname, "src/image"),
+        "@style": path.resolve(__dirname, "src/style"),
+        "@utils": path.resolve(__dirname, "src/utils"),
+        "@components": path.resolve(__dirname, "src/components"),
+      }),
+      adjustStyleLoaders(rule => {
+        if (rule.test.toString().includes("scss")) {
+          rule.use.push({
+            loader: require.resolve("sass-resources-loader"),
+            options: {
+              resources: [
+                "src/style/variable.scss",
+                "src/style/mixins/index.scss",
+              ] //这里是你自己放公共scss变量的路径
+            }
+          });
+        }
+      })
   );
