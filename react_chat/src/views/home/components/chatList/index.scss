@@ -1,0 +1,44 @@
+.chatList {
+    height: 128px;
+    .left {
+        position: relative;
+        img {
+            width: 96px;
+            height: 96px;
+            background-color: $color-primary;
+            border-radius: $border-radius-base;
+        }
+        .tip {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            height: 36px;
+            min-width: 36px;
+            background-color: $color-warning;
+            border-radius: $border-radius-circle;
+            font-size: $font-size-sm;
+            color: $text-color-inverse;
+        }
+    }
+    .top {
+        .name {
+            font-size: 36px;
+            color: $text-color;
+        }
+        .time {
+            font-size: $font-size-sm;
+            color: $text-color-disable;
+        }
+        .name,
+        .time {
+            height: 50px;
+            line-height: 50px;
+        }
+    }
+    .info {
+        font-size: $font-size-base;
+        color: $text-color-grey;
+        line-height: 40px;
+        height: 40px;
+    }
+}
