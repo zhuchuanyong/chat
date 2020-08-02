@@ -14,7 +14,7 @@
     }
 }
 
-@mixin flex_direction($dir: flex) {
+@mixin flex-direction($dir: flex) {
     flex-direction: $dir;
 }
 

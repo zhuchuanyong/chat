@@ -1,47 +1,46 @@
 .flex {
     display: flex;
-    flex-wrap: nowrap;
 }
-.flex_direction {
-    @include flex_direction;
+.flex-direction {
+    @include flex-direction;
 }
-.flex_direction_col {
-    @include flex_direction(column);
+.flex-direction-col {
+    @include flex-direction(column);
 }
-.flex_direction_col_r {
-    @include flex_direction(column-reverse);
+.flex-direction-col-r {
+    @include flex-direction(column-reverse);
 }
-.flex_direction_row_r {
-    @include flex_direction(row-reverse);
+.flex-direction-row-r {
+    @include flex-direction(row-reverse);
 }
 
 //换行
-.flex_wrap{
+.flex-wrap{
     flex-wrap: wrap;
 }
-.flex_nowrap{
+.flex-nowrap{
     flex-wrap: nowrap;
 }
-.flex_wrap-reverse{
+.flex-wrap-reverse{
     flex-wrap: wrap-reverse;
 }
 
 // 单行居中
-.flex_center {
+.flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 // 多行居中
-.flex_center_wrap {
+.flex-center-wrap {
     display: flex;
     justify-content: center;
     align-content: center;
 }
 
 @for $i from 1 through 20 {  
-    .flex_#{$i} {    
+    .flex#{$i} {    
         flex:#{$i} ;
     }
 }
