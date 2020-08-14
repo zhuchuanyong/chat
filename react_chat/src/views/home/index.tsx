@@ -9,7 +9,8 @@ function Home() {
 
   return (
     <div className="home h-min content ">
-      <HeaderCom></HeaderCom>
+      <HeaderCom className="fixed"></HeaderCom>
+      <div className='ht-88'></div>
       <div className="spacing-lf">
         <ChatList num={1} friendName="好友请求"></ChatList>
        {

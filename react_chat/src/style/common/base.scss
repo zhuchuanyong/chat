@@ -1,15 +1,14 @@
 @for $i from 1 through 10 {
-    @if $i ==1 {
-        .ellipsis {
-            @include ellipsis;
-        }
-    } @else {
-        .ellipsis#{$i} {
-            @include ellipsis(#{$i});
-        }
+  @if $i ==1 {
+    .ellipsis {
+      @include ellipsis;
     }
+  } @else {
+    .ellipsis#{$i} {
+      @include ellipsis(#{$i});
+    }
+  }
 }
-
 
 // 宽高
 
@@ -28,108 +27,104 @@
 .w-max {
   max-width: 100vw;
 }
-.w-min{
+.w-min {
   min-width: 100vw;
 }
 @for $i from 1 through 500 {
-    .h-#{$i} {
-        height: #{$i}px;
-    }
-}
-
-@for $i from 1 through 300 {
-    .w-#{$i} {
-        width: #{$i}px;
-    }
+  .ht-#{$i} {
+    height: #{$i}px;
+  }
+  .wt-#{$i} {
+    width: #{$i}px;
+  }
 }
 
 @for $i from 1 through 50 {
-    .pd-#{$i} {
-        padding: #{$i}px;
-    }
-    .pd-#{$i}-i {
-        padding: #{$i}px !important;
-    }
+  .pd-#{$i} {
+    padding: #{$i}px;
+  }
+  .pd-#{$i}-i {
+    padding: #{$i}px !important;
+  }
 
-    .pl-#{$i} {
-        padding-left: #{$i}px;
-    }
-    .pl-#{$i}-i {
-        padding-left: #{$i}px !important;
-    }
+  .pl-#{$i} {
+    padding-left: #{$i}px;
+  }
+  .pl-#{$i}-i {
+    padding-left: #{$i}px !important;
+  }
 
-    .pr-#{$i} {
-        padding-right: #{$i}px;
-    }
-    .pr-#{$i}-i {
-        padding-right: #{$i}px !important;
-    }
+  .pr-#{$i} {
+    padding-right: #{$i}px;
+  }
+  .pr-#{$i}-i {
+    padding-right: #{$i}px !important;
+  }
 
-    .pt-#{$i} {
-        padding-top: #{$i}px;
-    }
-    .pt-#{$i}-i {
-        padding-top: #{$i}px !important;
-    }
+  .pt-#{$i} {
+    padding-top: #{$i}px;
+  }
+  .pt-#{$i}-i {
+    padding-top: #{$i}px !important;
+  }
 
-    .pb-#{$i} {
-        padding-bottom: #{$i}px;
-    }
-    .pb-#{$i}-i {
-        padding-bottom: #{$i}px !important;
-    }
+  .pb-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  .pb-#{$i}-i {
+    padding-bottom: #{$i}px !important;
+  }
 
-    .mg#{$i} {
-        margin: #{$i}px;
-    }
-    .mg-#{$i}-i {
-        margin: #{$i}px !important;
-    }
+  .mg#{$i} {
+    margin: #{$i}px;
+  }
+  .mg-#{$i}-i {
+    margin: #{$i}px !important;
+  }
 
-    .ml-#{$i} {
-        margin-left: #{$i}px;
-    }
-    .ml-#{$i}-i {
-        margin-left: #{$i}px !important;
-    }
+  .ml-#{$i} {
+    margin-left: #{$i}px;
+  }
+  .ml-#{$i}-i {
+    margin-left: #{$i}px !important;
+  }
 
-    .mr-#{$i} {
-        margin-right: #{$i}px;
-    }
-    .mr-#{$i}-i {
-        margin-right: #{$i}px !important;
-    }
+  .mr-#{$i} {
+    margin-right: #{$i}px;
+  }
+  .mr-#{$i}-i {
+    margin-right: #{$i}px !important;
+  }
 
-    .mt-#{$i} {
-        margin-top: #{$i}px;
-    }
-    .mt-#{$i}-i {
-        margin-top: #{$i}px !important;
-    }
+  .mt-#{$i} {
+    margin-top: #{$i}px;
+  }
+  .mt-#{$i}-i {
+    margin-top: #{$i}px !important;
+  }
 
-    .mb-#{$i} {
-        margin-bottom: #{$i}px;
-    }
-    .mb-#{$i}-i {
-        margin-bottom: #{$i}px !important;
-    }
+  .mb-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  .mb-#{$i}-i {
+    margin-bottom: #{$i}px !important;
+  }
 }
 
 // opacity
 @for $i from 1 through 10 {
-  $alpha: $i*10;
-    @if $i > 9 {
-        .opacity {
-            // @include opacity(#{$i/10},$alpha);
-            @include opacity;
-        }
-    } @else {
-        .opacity_#{$i} {
-            @include opacity(#{$i/10}, $alpha);
-        }
+  $alpha: $i * 10;
+  @if $i > 9 {
+    .opacity {
+      // @include opacity(#{$i/10},$alpha);
+      @include opacity;
     }
+  } @else {
+    .opacity_#{$i} {
+      @include opacity(#{$i/10}, $alpha);
+    }
+  }
 }
-
 
 // 清除浮动
 .clearfix {
@@ -141,12 +136,10 @@
   @include blur;
 }
 
-
 // 滤镜: 将彩色照片显示为黑白照片、保留图片层次
-.grayscale{
-  @include grayscale(100%)
+.grayscale {
+  @include grayscale(100%);
 }
-
 
 // 点击显示小手
 .pointer {
@@ -154,7 +147,7 @@
 }
 
 // 文本不允许选中
-.noselect{
+.noselect {
   user-select: none;
 }
 
@@ -164,10 +157,9 @@
 }
 
 .spacing-lf {
-  padding:  0 $spacing-row-base;
+  padding: 0 $spacing-row-base;
 }
 
 .overflowH {
   overflow: hidden;
 }
-
