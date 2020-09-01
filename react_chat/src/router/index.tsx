@@ -6,10 +6,10 @@ function RouterConfig() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact  path="/">
+                <Route exact   path="/">
                     <Home />
                 </Route>
-                <Route path="/login">
+                <Route   path="/login">
                     <Login />
                 </Route>
             </Switch>
