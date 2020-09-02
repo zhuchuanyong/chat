@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom'
 import axios from 'axios'
 import "./index.scss";
 import logo from "@image/home/logo@2x.png";
-function Login() {
+function Signup() {
   const history=useHistory();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -24,24 +24,24 @@ function Login() {
     axios.get('http://192.168.31.175:3003/test').then(res=>{
       console.log(res)
     })
-    history.push('/')
+    history.push('/login')
   }
-  const signup=()=>{
-    history.push('/signup')
+  const back=()=>{
+    history.goBack()
   }
   return (
     <div className="login h-min">
-      <div className="top-bar justify-end w-screen flex">
-        <div onClick={signup} className="top-bar-right login-header-title flex items-center">
-          注册
-        </div>
+      <div className="top-bar justify-between w-screen flex">
+      <div onClick={back} className="top-bar-left flex-center ">
+                返回
+            </div>
+
       </div>
       <div className="logo w-screen flex items-center justify-center">
         <img src={logo} alt="" />
       </div>
       <div className="main">
         <div className="title">登录</div>
-        <div className="slogan flex items-center">你好,欢迎登陆</div>
         <div className="inputs">
           <input
             type="text"
@@ -59,10 +59,10 @@ function Login() {
       </div>
       <div className="ht-120"></div>
       <div className="flex justify-center ">
-      <div className="submit flex items-center justify-center" onClick={login}>登录</div>
+      <div className="submit flex items-center justify-center" onClick={login}>注册</div>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default Signup;
