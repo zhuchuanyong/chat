@@ -39,74 +39,74 @@
   }
 }
 
-@for $i from 1 through 50 {
-  .pd-#{$i} {
+@for $i from 0 through 50 {
+  .pd#{$i} {
     padding: #{$i}px;
   }
-  .pd-#{$i}-i {
+  .pd#{$i}-i {
     padding: #{$i}px !important;
   }
 
-  .pl-#{$i} {
+  .pl#{$i} {
     padding-left: #{$i}px;
   }
-  .pl-#{$i}-i {
+  .pl#{$i}-i {
     padding-left: #{$i}px !important;
   }
 
-  .pr-#{$i} {
+  .pr#{$i} {
     padding-right: #{$i}px;
   }
-  .pr-#{$i}-i {
+  .pr#{$i}-i {
     padding-right: #{$i}px !important;
   }
 
-  .pt-#{$i} {
+  .pt#{$i} {
     padding-top: #{$i}px;
   }
-  .pt-#{$i}-i {
+  .pt#{$i}-i {
     padding-top: #{$i}px !important;
   }
 
-  .pb-#{$i} {
+  .pb#{$i} {
     padding-bottom: #{$i}px;
   }
-  .pb-#{$i}-i {
+  .pb#{$i}-i {
     padding-bottom: #{$i}px !important;
   }
 
   .mg#{$i} {
     margin: #{$i}px;
   }
-  .mg-#{$i}-i {
+  .mg#{$i}-i {
     margin: #{$i}px !important;
   }
 
-  .ml-#{$i} {
+  .ml#{$i} {
     margin-left: #{$i}px;
   }
-  .ml-#{$i}-i {
+  .ml#{$i}-i {
     margin-left: #{$i}px !important;
   }
 
-  .mr-#{$i} {
+  .mr#{$i} {
     margin-right: #{$i}px;
   }
-  .mr-#{$i}-i {
+  .mr#{$i}-i {
     margin-right: #{$i}px !important;
   }
 
-  .mt-#{$i} {
+  .mt#{$i} {
     margin-top: #{$i}px;
   }
-  .mt-#{$i}-i {
+  .mt#{$i}-i {
     margin-top: #{$i}px !important;
   }
 
-  .mb-#{$i} {
+  .mb#{$i} {
     margin-bottom: #{$i}px;
   }
-  .mb-#{$i}-i {
+  .mb#{$i}-i {
     margin-bottom: #{$i}px !important;
   }
 }

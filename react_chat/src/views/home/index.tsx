@@ -14,7 +14,7 @@ function Home() {
       <HeaderCom
        onLeftClick={() => console.log('onLeftClick')}
         rightContent={[
-          <img key="0" onClick={() => console.log('img')}className="mr-18" src={search} alt="" />,
+          <img key="0" onClick={() => console.log('img')}className="mr18" src={search} alt="" />,
           <img key="1" src={add} alt="" />,
         ]}
         leftContent={<img src={avatar} alt="" />}

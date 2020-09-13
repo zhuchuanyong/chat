@@ -26,7 +26,7 @@ function ChatList(props: IProps) {
         <div className="tip flex-center">{props.num}</div>
         <img src={props.imgUrl} alt="" />
       </div>
-      <div className="center overflowH flex1 pl-30">
+      <div className="center overflowH flex1 pl30">
         <div className="top flex">
           <div className="name flex1">{props.friendName}</div>
           <div className="time">{props.time}</div>
