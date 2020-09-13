@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import {useHistory} from 'react-router-dom'
-import axios from 'axios'
+import { useHistory } from "react-router-dom";
+import axios from "axios";
 import "./index.scss";
+import HeaderCom from "@components/Header";
 import logo from "@image/home/logo@2x.png";
 function Signup() {
-  const history=useHistory();
+  const history = useHistory();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const usernameChange = (e: any) => {
@@ -16,27 +17,22 @@ function Signup() {
     console.log("password", password);
   };
 
-  const login=()=>{
-    console.log('lll')
-    axios.get('http://192.168.31.175:3003').then(res=>{
-      console.log(res)
-    })
-    axios.get('http://192.168.31.175:3003/test').then(res=>{
-      console.log(res)
-    })
-    history.push('/login')
-  }
-  const back=()=>{
-    history.goBack()
-  }
+  const login = () => {
+    console.log("lll");
+    axios.get("http://192.168.31.175:3003").then((res) => {
+      console.log(res);
+    });
+    axios.get("http://192.168.31.175:3003/test").then((res) => {
+      console.log(res);
+    });
+    history.push("/login");
+  };
+  const back = () => {
+    history.goBack();
+  };
   return (
     <div className="login h-min">
-      <div className="top-bar justify-between w-screen flex">
-      <div onClick={back} className="top-bar-left flex-center ">
-                返回
-            </div>
-
-      </div>
+       <HeaderCom leftContent='返回' onLeftClick={back}></HeaderCom>
       <div className="logo w-screen flex items-center justify-center">
         <img src={logo} alt="" />
       </div>
@@ -59,7 +55,12 @@ function Signup() {
       </div>
       <div className="ht-120"></div>
       <div className="flex justify-center ">
-      <div className="submit flex items-center justify-center" onClick={login}>注册</div>
+        <div
+          className="submit flex items-center justify-center"
+          onClick={login}
+        >
+          注册
+        </div>
       </div>
     </div>
   );
