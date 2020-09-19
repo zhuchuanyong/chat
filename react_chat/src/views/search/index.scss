@@ -1,0 +1,52 @@
+.main {
+  .result {
+    padding:$spacing-col-base;
+  }
+  .title {
+    font-size:44px;
+    font-weight:600;
+    color: $text-color;
+    line-height: 60px;
+  }
+  .list {
+    height: 100px;
+
+   img {
+    width:80px;
+    height: 80px;
+    border-radius: $border-radius-base;
+   }
+  }
+  .names {
+    padding-left: $spacing-col-base;
+  }
+  .name {
+    font-size:36px;
+    color: $text-color;
+    line-height: 50px;
+
+  }
+  .email  {
+    font-size:$font-size-sm;
+    color: $text-color;
+    // line-height: 50px;
+
+  }
+  .right-bt {
+    width:120px;
+    height: 48px;
+    border-radius:24px;
+    font-size:$font-size-sm;
+    color: $text-color;
+    line-height: 48px;
+    text-align: center;
+  }
+  .send {
+    background:$color-primary;
+    color: $text-color;
+  }
+  .add {
+    background:rgba(74,170,255, 0.1);
+    color: $color-success;
+  }
+}
