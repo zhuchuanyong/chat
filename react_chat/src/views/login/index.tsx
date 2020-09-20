@@ -19,20 +19,28 @@ function Login() {
 
   const login = () => {
     console.log("lll");
-    axios.get("http://192.168.31.175:3003").then((res) => {
-      console.log(res);
-    });
+    // axios.get("http://192.168.31.175:3003").then((res) => {
+    //   console.log(res);
+    // });
     axios.get("http://192.168.31.175:3003/test").then((res) => {
       console.log(res);
     });
-    history.push("/");
+    axios
+      .post("http://192.168.31.175:3003/mail", {
+        mail: "zhu1251637837@gmail.com",
+        lastName: "Flintstone",
+      })
+      .then((res) => {
+        console.log(res);
+      });
+    // history.push("/");
   };
   const signup = () => {
     history.push("/signup");
   };
   return (
     <div className="login h-min">
-       <HeaderCom rightContent='注册' onRightClick={signup}></HeaderCom>
+      <HeaderCom rightContent="注册" onRightClick={signup}></HeaderCom>
       <div className="logo w-screen flex items-center justify-center">
         <img src={logo} alt="" />
       </div>
