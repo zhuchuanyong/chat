@@ -4,6 +4,7 @@ import Home from '../views/home';
 import Login from '../views/login';
 import Signup from '../views/signup';
 import Search from '../views/search';
+import UserHome from '../views/userhome';
 function RouterConfig() {
     return (
         <BrowserRouter>
@@ -20,6 +21,9 @@ function RouterConfig() {
                 </Route>
                 <Route   path="/search">
                     <Search />
+                </Route>
+                <Route   path="/userhome">
+                    <UserHome />
                 </Route>
             </Switch>
         </BrowserRouter>
